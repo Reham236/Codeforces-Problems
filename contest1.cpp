@@ -74,22 +74,33 @@ int main() {
 //        cout<<result ;
 // }
 
-// Problem H. Data Type Guessing     (https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/H)
+// // Problem H. Data Type Guessing     (https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/H)
 
-long long n, k, a;
-cin >> n >> k >> a;
-long double result = (long double)n * (long double)k / (long double)a;
-cout << result << endl;
-// If there's a fractional part -> double
-if (fmod((double)result, 1.0) != 0.0) {
-  cout << "double";
-} else {
-  // No fractional part: check integer range
-  if (result > INT_MAX || result < INT_MIN) {
-    cout << "long long";
-  } else {
-    cout << "int";
-  }
+// long long n, k, a;
+// cin >> n >> k >> a;
+// long double result = (long double)n * (long double)k / (long double)a;
+// cout << result << endl;
+// // If there's a fractional part -> double
+// if (fmod((double)result, 1.0) != 0.0) {
+//   cout << "double";
+// } else {
+//   // No fractional part: check integer range
+//   if (result > INT_MAX || result < INT_MIN) {
+//     cout << "long long";
+//   } else {
+//     cout << "int";
+//   }
+// }
+
+
+// Problem I. Lucky Numbers         (https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/I)
+int N;
+cin>>N;
+
+if((N%10) % (N/10)==0 || (N/10) % (N%10)==0 ){
+  cout<<"YES";
+}else{
+  cout<<"NO";
 }
     return 0;
 }
