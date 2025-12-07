@@ -93,14 +93,14 @@ int main() {
 // }
 
 
-// Problem I. Lucky Numbers         (https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/I)
-int N;
-cin>>N;
+// // Problem I. Lucky Numbers         (https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/I)
+// int N;
+// cin>>N;
 
-if((N%10) % (N/10)==0 || (N/10) % (N%10)==0 ){
-  cout<<"YES";
-}else{
-  cout<<"NO";
-}
+// if((N%10) % (N/10)==0 || (N/10) % (N%10)==0 ){
+//   cout<<"YES";
+// }else{
+//   cout<<"NO";
+// }
     return 0;
 }
