@@ -77,7 +77,7 @@ int main(){
 //   }
   
 
-//Problem 
+//Problem N. Check Code  (https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/N)
 int A ,B;
 cin>>A>>B;
 string s;
