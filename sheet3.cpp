@@ -77,30 +77,59 @@ int main(){
 //   }
   
 
-//Problem N. Check Code  (https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/N)
-int A ,B;
-cin>>A>>B;
-string s;
-cin >>s;
-if(s.size()!= A+B+1 || s[A]!='-'){
-    cout<<"No";
-    return 0;
-}
+// //Problem N. Check Code  (https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/N)
+// int A ,B;
+// cin>>A>>B;
+// string s;
+// cin >>s;
+// if(s.size()!= A+B+1 || s[A]!='-'){
+//     cout<<"No";
+//     return 0;
+// }
  
-for(int i=0;i<A;i++){
+// for(int i=0;i<A;i++){
    
-     if(!isdigit(s[i])){ 
-        cout<<"No";
-       return 0;
-      }
- } 
- for(int i=A+1;i<A+B+1;i++){
+//      if(!isdigit(s[i])){ 
+//         cout<<"No";
+//        return 0;
+//       }
+//  } 
+//  for(int i=A+1;i<A+B+1;i++){
    
-     if(!isdigit(s[i])){ 
-        cout<<"No";
-       return 0;
-      }
- }
- cout<<"Yes";  
+//      if(!isdigit(s[i])){ 
+//         cout<<"No";
+//        return 0;
+//       }
+//  }
+//  cout<<"Yes";  
+
+// Problem P. Minimize Number (https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/P)
+int N;
+cin>>N;
+vector<int> nums(N);
+for (int i = 0; i < N; i++)
+{
+    cin>>nums[i];
+}
+int i=0;
+int counter=0;
+while(i<N){
+  
+  if(i==N-1){
+    counter++;
+  }
+  if (nums[i]%2==0)
+  {
+    nums[i]/=2;
+  i=(i+1)%N;
+    continue;
+  }else{
+    
+    break;
+  }
+  
+  
+}
+cout<<counter; 
  return 0;
 }
