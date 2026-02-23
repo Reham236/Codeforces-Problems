@@ -103,33 +103,85 @@ int main(){
 //  }
 //  cout<<"Yes";  
 
-// Problem P. Minimize Number (https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/P)
-int N;
-cin>>N;
-vector<int> nums(N);
-for (int i = 0; i < N; i++)
-{
-    cin>>nums[i];
-}
-int i=0;
-int counter=0;
-while(i<N){
+// // Problem P. Minimize Number (https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/P)
+// int N;
+// cin>>N;
+// vector<int> nums(N);
+// for (int i = 0; i < N; i++)
+// {
+//     cin>>nums[i];
+// }
+// int i=0;
+// int counter=0;
+// while(i<N){
   
-  if(i==N-1){
-    counter++;
-  }
-  if (nums[i]%2==0)
-  {
-    nums[i]/=2;
-  i=(i+1)%N;
-    continue;
-  }else{
+//   if(i==N-1){
+//     counter++;
+//   }
+//   if (nums[i]%2==0)
+//   {
+//     nums[i]/=2;
+//   i=(i+1)%N;
+//     continue;
+//   }else{
     
-    break;
-  }
+//     break;
+//   }
   
   
+// }
+// cout<<counter; 
+
+
+// // Problem R. Permutation with arrays (https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/R)
+// int N;
+// cin >> N;
+// vector<int> arrayA(N);
+// for (int i = 0; i < N; i++) {
+//     cin >> arrayA[i];
+// }
+// vector<int> arrayB(N);
+// for (int i = 0; i < N; i++) {
+//     cin >> arrayB[i];
+// }
+
+// sort(arrayA.begin(), arrayA.end());
+// sort(arrayB.begin(), arrayB.end());
+
+// if (arrayA == arrayB) {
+//     cout << "yes";
+// } else {
+//     cout << "no";
+// }
+
+// Poblem S. Search In Matrix (https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/S)
+
+
+int N, M,X;
+cin >> N >> M;
+vector<vector<int>> matrix(N, vector<int>(M));
+for (int i = 0; i < N; i++) {
+    for (int j = 0; j < M; j++) {
+        cin >> matrix[i][j];
+    }
 }
-cout<<counter; 
- return 0;
+cin >> X;
+bool found = false;
+for (int i = 0; i < N; i++) {
+    for (int j = 0; j < M; j++) {
+        if (matrix[i][j] == X) {
+            found = true;
+            break;
+        }
+    }
+    if (found) {
+        break;
+    }
+}
+if (found) {
+    cout << "will not take number";
+} else {
+    cout << "will take number";
+}
+return 0;
 }
