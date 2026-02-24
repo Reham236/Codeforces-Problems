@@ -154,34 +154,57 @@ int main(){
 //     cout << "no";
 // }
 
-// Poblem S. Search In Matrix (https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/S)
+// // Poblem S. Search In Matrix (https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/S)
 
 
-int N, M,X;
-cin >> N >> M;
-vector<vector<int>> matrix(N, vector<int>(M));
+// int N, M,X;
+// cin >> N >> M;
+// vector<vector<int>> matrix(N, vector<int>(M));
+// for (int i = 0; i < N; i++) {
+//     for (int j = 0; j < M; j++) {
+//         cin >> matrix[i][j];
+//     }
+// }
+// cin >> X;
+// bool found = false;
+// for (int i = 0; i < N; i++) {
+//     for (int j = 0; j < M; j++) {
+//         if (matrix[i][j] == X) {
+//             found = true;
+//             break;
+//         }
+//     }
+//     if (found) {
+//         break;
+//     }
+// }
+// if (found) {
+//     cout << "will not take number";
+// } else {
+//     cout << "will take number";
+// }
+
+// Problem T. Matrix (https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/T)
+int N;
+cin >> N;
+vector<vector<int>> A(N, vector<int>(N));
 for (int i = 0; i < N; i++) {
-    for (int j = 0; j < M; j++) {
-        cin >> matrix[i][j];
+    for (int j = 0; j < N; j++) {
+        cin >> A[i][j];
     }
 }
-cin >> X;
-bool found = false;
-for (int i = 0; i < N; i++) {
-    for (int j = 0; j < M; j++) {
-        if (matrix[i][j] == X) {
-            found = true;
-            break;
-        }
-    }
-    if (found) {
-        break;
-    }
+int PrimaryDiagonalSum = 0;
+int SecondaryDiagonalSum = 0;
+for(int i=0;i<N;i++){
+    PrimaryDiagonalSum += A[i][i];
+    SecondaryDiagonalSum += A[i][N-1-i];
 }
-if (found) {
-    cout << "will not take number";
-} else {
-    cout << "will take number";
+if(PrimaryDiagonalSum- SecondaryDiagonalSum<0 ){
+    cout<<-1*(PrimaryDiagonalSum- SecondaryDiagonalSum);
+
+}
+else{
+ cout<<PrimaryDiagonalSum- SecondaryDiagonalSum;
 }
 return 0;
 }
