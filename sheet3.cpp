@@ -184,27 +184,61 @@ int main(){
 //     cout << "will take number";
 // }
 
-// Problem T. Matrix (https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/T)
-int N;
-cin >> N;
-vector<vector<int>> A(N, vector<int>(N));
-for (int i = 0; i < N; i++) {
-    for (int j = 0; j < N; j++) {
-        cin >> A[i][j];
-    }
-}
-int PrimaryDiagonalSum = 0;
-int SecondaryDiagonalSum = 0;
-for(int i=0;i<N;i++){
-    PrimaryDiagonalSum += A[i][i];
-    SecondaryDiagonalSum += A[i][N-1-i];
-}
-if(PrimaryDiagonalSum- SecondaryDiagonalSum<0 ){
-    cout<<-1*(PrimaryDiagonalSum- SecondaryDiagonalSum);
+// // Problem T. Matrix (https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/T)
 
-}
-else{
- cout<<PrimaryDiagonalSum- SecondaryDiagonalSum;
-}
+// int N;
+// cin >> N;
+// vector<vector<int>> A(N, vector<int>(N));
+// for (int i = 0; i < N; i++) {
+//     for (int j = 0; j < N; j++) {
+//         cin >> A[i][j];
+//     }
+// }
+// int PrimaryDiagonalSum = 0;
+// int SecondaryDiagonalSum = 0;
+// for(int i=0;i<N;i++){
+//     PrimaryDiagonalSum += A[i][i];
+//     SecondaryDiagonalSum += A[i][N-1-i];
+// }
+// if(PrimaryDiagonalSum- SecondaryDiagonalSum<0 ){
+//     cout<<-1*(PrimaryDiagonalSum- SecondaryDiagonalSum);
+// }
+// else{
+//  cout<<PrimaryDiagonalSum- SecondaryDiagonalSum;
+// }
+//
+
+// Problem V. Frequency Array (https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/V)
+//  int N, M;
+// cin >> N >> M;
+// vector<int > A(N);
+// vector<int > B(M);
+// for (int i = 0; i < N; i++) {
+//     cin >> A[i];
+//     if(A[i]<=M){
+//         B[A[i]-1]++;
+
+//     }
+// }
+// for (int i = 0; i < M; i++) {
+//     cout << B[i] << " ";
+// }
+
+// Problem W. Mirror  (https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/W)
+ int N,M;
+ cin >> N >> M;
+    vector<vector<int>> A(N, vector<int>(M));
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) {
+            cin >> A[i][j];
+        }
+    }
+    for (int i = 0; i < N; i++) {
+        for (int j = M-1; j >= 0; j--) {
+            cout << A[i][j] << " ";
+        }
+        cout << endl;
+    }
+
 return 0;
 }
